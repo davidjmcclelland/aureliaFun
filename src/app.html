@@ -1,41 +1,14 @@
 <template>
   <require from="./components/custom-component.html"></require>
-  <h1>${header}</h1>
+
   <h1>${message}</h1>
   <h1>${user}</h1>
-  <h2>${footer}</h2>
+
   <custom-component></custom-component>
 
   <button click.delegate="updateContent()">Update</button>
-</template>
 
-<!-- everything from here down is not wired up -->
-
-<!-- using bind -->
-<input value.bind="firstName"/>
-
-<!-- one-way bind -->
-<p content.one-way="name"></p>
-
-<!-- one-way bind -->
-<input value.two-way="search"/>
-
-<!-- one-time bind -->
-<span content.one-time="message"></span>
-
-<!-- string interpolation-->
-<span>Hello ${name}</span>
-
-<!-- loops -->
-<ul>
-  <li repeat.for="row of router.navigation">
-    row ${row.name}
-  </li>
-</ul>
-
-<-- reference binding -->
-<template>
-  <h1> ${title}</h1>
-  <input ref="customerName">
-  <h2>Hello ${customerName.value}, how can I help you?</h2>
+  <p>binding example</p>
+  <input id="first" type="text" value.bind="firstName"/>
+  <h3>${firstName}</h3>
 </template>
