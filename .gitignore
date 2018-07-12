@@ -31,7 +31,8 @@ node_modules
 scripts
 /aureliaFun.iml
 /aureliaFun.ipr
-/aurelia_project/
 /.vscode/
 /dist/
 /aureliaFun.iws
+/aurelia_project/generators/
+/aurelia_project/tasks/
