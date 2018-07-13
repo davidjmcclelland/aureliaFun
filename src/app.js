@@ -10,6 +10,18 @@ export class App {
   }
 
   /*
+  lifecycle
+
+  constructor()
+  created(owningVIEW, myView) -- js and html resources are linked
+  bind(bindingContext, overrideContext) -- events
+  attached() - view is available on the DOM
+  detached() - view is removed from the DOM
+  unbind() - events are unbound from the object
+
+  */
+   */
+  /*
 
       let firstName = David;
       let lastName = McClelland;
