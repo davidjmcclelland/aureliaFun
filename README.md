@@ -3,12 +3,5 @@ orielly-packt course
 
 https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video1_3
 
-Converters: dates, times, units, etc
-https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video2_8
-
-moment and numeral were installed for this unit: npm install to get this.
-
-The course is all wrong on how to set up converters, follow this intead:
-
-https://aurelia.io/docs/binding/value-converters#simple-converters
+events: Simple events from a button. You don't need the course to figure this one out ; )
 

@@ -18,4 +18,9 @@ export class App {
     this.netWorth = Math.random() * 1000000000;
   }
 
+  clickFunction(msg){
+    console.log("The clickFunction message: " + msg);
+    this.message = msg;
+  }
+
 }
