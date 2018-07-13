@@ -3,11 +3,19 @@ export class App {
     this.message = 'Aurelia Framework!';
     this.user = 'David J McClelland';
     this.firstName = "Enter your name";
+
+    this.update();
+    setInterval(() => this.update(), 1000);
   }
 
   updateContent() {
     this.message = 'Aurelia World';
     this.user = 'David J User';
+  }
+
+  update() {
+    this.currentDate = new Date();
+    this.netWorth = Math.random() * 1000000000;
   }
 
 }

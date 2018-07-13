@@ -1,5 +1,10 @@
 <template>
-  <require from="./components/custom-component.html"></require>
+  <require from = "./components/custom-component.html"></require>
+  <require from="./converters/date-format"></require>
+  <require from="./converters/currency-format"></require>
+
+  ${currentDate | dateFormat} <br/>
+  ${netWorth | currencyFormat}
 
   <h1>${message}</h1>
   <h1>${user}</h1>
@@ -10,5 +15,6 @@
 
   <p>binding example</p>
   <input id="first" type="text" value.bind="firstName"/>
-  <h3>${firstName}</h3>
+
+  <h3>${firstName} on ${currentDate | dateFormat}</h3>
 </template>
