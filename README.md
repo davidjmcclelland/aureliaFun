@@ -1,7 +1,4 @@
 # aureliaFun
-orielly-packt course
+[orielly-packt course](https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video1_3)
 
-https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video1_3
-
-Data Binding Scenarios - really only covers live 2-way binding.
-https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video2_4
+[Data Binding Scenarios - really only covers live 2-way binding.](https://www.safaribooksonline.com/videos/aurelia-for-beginners/9781789139754/9781789139754-video2_4)
