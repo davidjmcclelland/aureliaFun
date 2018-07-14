@@ -8,34 +8,3 @@
 
   <button click.delegate="updateContent()">Update</button>
 </template>
-
-<!-- everything from here down is not wired up -->
-
-<!-- using bind -->
-<input value.bind="firstName"/>
-
-<!-- one-way bind -->
-<p content.one-way="name"></p>
-
-<!-- one-way bind -->
-<input value.two-way="search"/>
-
-<!-- one-time bind -->
-<span content.one-time="message"></span>
-
-<!-- string interpolation-->
-<span>Hello ${name}</span>
-
-<!-- loops -->
-<ul>
-  <li repeat.for="row of router.navigation">
-    row ${row.name}
-  </li>
-</ul>
-
-<-- reference binding -->
-<template>
-  <h1> ${title}</h1>
-  <input ref="customerName">
-  <h2>Hello ${customerName.value}, how can I help you?</h2>
-</template>
