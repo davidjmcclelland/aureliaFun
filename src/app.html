@@ -3,18 +3,20 @@
   <require from="./converters/date-format"></require>
   <require from="./converters/currency-format"></require>
 
-  ${currentDate | dateFormat} <br/>
-  ${netWorth | currencyFormat}
+  <h3>Converter example</h3>
+  <p>${currentDate | dateFormat} <br/>
+    ${netWorth | currencyFormat} </p>
 
-  <h1>${message}</h1>
-  <h1>${user}</h1>
+  <h2>${message}</h2>
+  <h2>${user}</h2>
 
   <custom-component></custom-component>
-
+  <h3>event binding example</h3>
   <button click.delegate="updateContent()">Update</button>
 
-  <p>binding example</p>
+  <h3>binding example</h3>
   <input id="first" type="text" value.bind="firstName"/>
-
-  <h3>${firstName} on ${currentDate | dateFormat}</h3>
+  <hr />
+  <h3>Converter and binding example</h3>
+  <p>${firstName} on ${currentDate | dateFormat}</p>
 </template>
