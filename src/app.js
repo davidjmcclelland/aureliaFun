@@ -9,11 +9,25 @@ export class App {
     this.message = 'Aurelia Framework!';
     this.user = 'David J McClelland';
     this.firstName = "Enter your name";
-
     this.update();
     setInterval(() => this.update(), 1000);
   }
-
+  //02 data binding
+  updateContent() {
+    this.message = 'Aurelia World';
+    this.user = 'David J User';
+  }
+  // 03 -data binding
+  clickFunction(msg){
+    console.log("The clickFunction message: " + msg);
+    this.message = msg;
+  }
+  //04-converters
+  update() {
+    this.currentDate = new Date();
+    this.netWorth = Math.random() * 1000000000;
+  }
+  // 05 event aggregator
   publish(msg){
     let payload = msg;
     this.eventAggregator.publish('myEventName', payload);
@@ -30,19 +44,4 @@ export class App {
     // payload is undefined below and you will see an error in console!
     console.log("payload disposed - payload: " + payload);
   }
-  updateContent() {
-    this.message = 'Aurelia World';
-    this.user = 'David J User';
-  }
-
-  update() {
-    this.currentDate = new Date();
-    this.netWorth = Math.random() * 1000000000;
-  }
-
-  clickFunction(msg){
-    console.log("The clickFunction message: " + msg);
-    this.message = msg;
-  }
-
 }
