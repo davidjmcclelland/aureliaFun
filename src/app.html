@@ -19,5 +19,9 @@
   <h3>${firstName} on ${currentDate | dateFormat}</h3>
 
   <button click.delegate="clickFunction('A message from clickFunction')" id="clickFunction">clickFunction</button>
+  <button click.delegate="subscribe('A message from subscribe')" id="subscribe_button">subscribe</button>
+  <button click.delegate="publish('A message from publish')" id="publish_button">publish</button>
+  <button click.delegate="dispose('A message from dispose')" id="dispose_button">dispose</button>
+
 
 </template>
