@@ -17,6 +17,7 @@ export class App {
     //06-forms
     this.email = "";
     this.password="";
+    //07-references
   }
   //02 data binding
   updateContent() {
@@ -55,4 +56,7 @@ export class App {
     let myUser = {email: this.email, password: this.password};
     console.log("myUser: " + JSON.stringify(myUser));
   }
+
+  // 07-references
+  // the point with references is that you get bindings without a javascript backing it in the app
 }
