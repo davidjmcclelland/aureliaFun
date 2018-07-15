@@ -8,7 +8,6 @@
   <require from="./styles.css"></require>
   <require from="bootstrap.css"></require>
   <h4>08-routing</h4>
-
   <nav>
     <ul>
       <li repeat.for = "row of router.navigation">
@@ -17,6 +16,11 @@
     </ul>
   </nav>
   <router-view></router-view>
+  <hr />
+  <h4>09-history</h4>
+  <button click.delegate = "goBack()">Back</button>
+  <button click.delegate = "goForward()">Next</button>
+  <hr />
   <h4>Converter Example</h4>
   <p>
   ${currentDate | dateFormat} <br/>

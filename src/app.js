@@ -82,4 +82,11 @@ export class App {
     ]);
     this.router = router;
   }
+  // 09-history builds on/requires 08-router
+  goBack(){
+    history.back();
+  }
+  goForward(){
+    history.forward();
+  }
 }
