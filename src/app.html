@@ -1,9 +1,22 @@
 <template>
+  <!-- 08-routing -->
+  <require from = "./components/about/about.html"></require>
+  <require from = "./components/home/home.html"></require>
   <require from = "./components/custom-component.html"></require>
   <require from="./converters/date-format"></require>
   <require from="./converters/currency-format"></require>
   <require from="./styles.css"></require>
   <require from="bootstrap.css"></require>
+  <h4>08-routing</h4>
+
+  <nav>
+    <ul>
+      <li repeat.for = "row of router.navigation">
+        <a href.bind="row.href">${row.title}</a>
+      </li>
+    </ul>
+  </nav>
+  <router-view></router-view>
   <h4>Converter Example</h4>
   <p>
   ${currentDate | dateFormat} <br/>
@@ -42,4 +55,5 @@
   <h4>References</h4>
   <input type="text" ref="refName"><br />
   <p>${refName.value}</p>
+
 </template>

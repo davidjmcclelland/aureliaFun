@@ -16,47 +16,70 @@ export class App {
     this.eventAggregator = eventAggregator;
     //06-forms
     this.email = "";
-    this.password="";
+    this.password = "";
     //07-references
   }
+
   //02 data binding
   updateContent() {
     this.message = 'Aurelia World';
     this.user = 'David J User';
   }
+
   //03 data binding
-  clickFunction(msg){
+  clickFunction(msg) {
     console.log("The clickFunction message: " + msg);
     this.message = msg;
   }
+
   //04-converters
   update() {
     this.currentDate = new Date();
     this.netWorth = Math.random() * 1000000000;
   }
+
   // 05 event aggregator
-  publish(msg){
+  publish(msg) {
     let payload = msg;
     this.eventAggregator.publish('myEventName', payload);
   }
-  subscribe(msg){
+
+  subscribe(msg) {
     console.log("subscribe: " + msg);
-    this.subscriber = this.eventAggregator.subscribe('myEventName', payload=> {
+    this.subscriber = this.eventAggregator.subscribe('myEventName', payload => {
       console.log(payload);
     });
   }
-  dispose(msg){
+
+  dispose(msg) {
     console.log("dispose: " + msg);
     this.subscriber.dispose();
     // payload is undefined below and you will see an error in console!
     console.log("payload disposed - payload: " + payload);
   }
- //06-forms
-  signup(){
+
+  //06-forms
+  signup() {
     let myUser = {email: this.email, password: this.password};
     console.log("myUser: " + JSON.stringify(myUser));
   }
 
   // 07-references
   // the point with references is that you get bindings without a javascript backing it in the app
+
+  //08-routing
+  configureRouter(config, router) {
+    config.title = "Aurelia";
+    config.map([
+      {
+        route: ['', 'home'], name: 'home',
+        moduleId: PLATFORM.moduleName('components/home/home'), nav: true, title: 'Home'
+      },
+      {
+        route: ['about'], name: 'about',
+        moduleId: PLATFORM.moduleName('./components/about/about'), nav: true, title: 'About'
+      }
+    ]);
+    this.router = router;
+  }
 }
