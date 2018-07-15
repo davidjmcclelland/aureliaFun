@@ -5,19 +5,25 @@ import {EventAggregator} from 'aurelia-event-aggregator';
 
 export class App {
   constructor(eventAggregator) {
-    this.eventAggregator = eventAggregator;
+    //02 binding
     this.message = 'Aurelia Framework!';
     this.user = 'David J McClelland';
     this.firstName = "Enter your name";
-    this.update();
+    //04 converters
     setInterval(() => this.update(), 1000);
+    this.update();
+    //05-events
+    this.eventAggregator = eventAggregator;
+    //06-forms
+    this.email = "";
+    this.password="";
   }
   //02 data binding
   updateContent() {
     this.message = 'Aurelia World';
     this.user = 'David J User';
   }
-  // 03 -data binding
+  //03 data binding
   clickFunction(msg){
     console.log("The clickFunction message: " + msg);
     this.message = msg;
@@ -43,5 +49,10 @@ export class App {
     this.subscriber.dispose();
     // payload is undefined below and you will see an error in console!
     console.log("payload disposed - payload: " + payload);
+  }
+ //06-forms
+  signup(){
+    let myUser = {email: this.email, password: this.password};
+    console.log("myUser: " + JSON.stringify(myUser));
   }
 }
